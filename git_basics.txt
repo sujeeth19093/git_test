@@ -1,0 +1,67 @@
+
+https://www.youtube.com/watch?v=Y9XZQO1n_7c
+
+REMOTE REPO COMMANDS
+
+	git remote
+
+
+
+git add (filename) 
+	- adds (filename)
+	
+git add .
+	- adds all files tracked and untracked 
+	
+git add *.(extension)
+	- adds all files with .extension tracked and untracked
+	
+git commit
+	- stages the update to the file in the repo 
+	- commit message must be added using vim like editor
+	
+git commit -m "(msg)"
+	- commits changed files with commit messge (msg)
+	- avoids open vim like editor
+	
+git commit -a -m "(msg)"
+	- directly commits updates on all TRACKED files bypassing the "git add .." command stage
+	- new files that are added ie UNTRACKED files will not be added and "git add .." must be used
+
+git log
+	- displays information of all git commits
+	
+NOTE:
+*
+.gitignore files
+	- if there is a file (such as log files) that you do not want commited, added the .gitignore extension to the file
+*
+
+git branch (branch_name)
+	- creates a new branch (branch_name)
+
+git checkout (branch_name)
+	- switches to (branch_name)
+
+git merge (branch_name)
+	- merges current branch with (branch_name)
+	
+NOTE:
+*
+	- name of main branch is "master"
+
+MERGE CONFLICT
+	- a merge conflict arises when a branch creates changes to the file but before its merged with "master" (or orgnial branch),
+	  there is change of the same file in "master" (or orginal branch) 
+	  
+MERGETOOL
+	- helps solve merge conflicts
+*
+
+git stash
+	- stashes uncommited files (but staged) on the current branch; acts similar to pushing files on a stack
+	- this is done when you have files you do not want commited to a branch but need to switch to another branch
+	
+git stash apply
+	- unstashes stashed files on the current branch; acts similar to popping files from a stack
+
